@@ -1,0 +1,169 @@
+/* ===== General Styles ===== */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* ===== Header ===== */
+header {
+  background: #333;
+  color: #fff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.site-name h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.site-name .highlight {
+  color: #f39c12;
+}
+
+.nav-links,
+.auth-links {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links a,
+.auth-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.auth-links a:hover {
+  color: #f39c12;
+}
+
+/* ===== Hero Section ===== */
+#hero {
+  background: linear-gradient(to right, #f39c12, #e67e22);
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero-content .highlight {
+  color: #333;
+  background: #fff;
+  padding: 0 5px;
+  border-radius: 3px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: #333;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #222;
+}
+
+/* ===== Modal ===== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.modal-content {
+  background: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from {transform: translateY(30px); opacity: 0;}
+  to {transform: translateY(0); opacity: 1;}
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+form button {
+  background: #f39c12;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background: #d35400;
+}
