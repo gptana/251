@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Game Top-up</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="nav-container">
+      <div class="site-name">
+        <h1><span class="highlight">TopUp</span> Game</h1>
+      </div>
+      <div class="nav-links">
+        <a href="#">หน้าหลัก</a>
+        <a href="#">โปรโมชั่น</a>
+      </div>
+      <div class="auth-links">
+        <a href="#" onclick="openLoginModal()">เข้าสู่ระบบ</a>
+        <a href="#" onclick="openRegisterModal()">สมัครสมาชิก</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="hero">
+    <div class="hero-content">
+      <h1>เติมเกม <span class="highlight">ง่ายและเร็ว</span></h1>
+      <p>แค่สมัครก็รับสิทธิพิเศษมากมาย!</p>
+      <a href="#" class="btn-primary" onclick="openRegisterModal()">เริ่มต้นเลย</a>
+    </div>
+  </section>
+
+  <!-- Register Modal -->
+  <div id="registerModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeRegisterModal()">&times;</span>
+      <h2>สมัครสมาชิก</h2>
+      <form id="registerForm">
+        <label for="regUsername">ชื่อผู้ใช้:</label>
+        <input type="text" id="regUsername" name="username" required />
+        
+        <label for="regEmail">อีเมล:</label>
+        <input type="email" id="regEmail" name="email" required />
+        
+        <label for="regPassword">รหัสผ่าน:</label>
+        <input type="password" id="regPassword" name="password" required />
+        
+        <button type="submit">สมัครสมาชิก</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Login Modal -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeLoginModal()">&times;</span>
+      <h2>เข้าสู่ระบบ</h2>
+      <form id="loginForm">
+        <label for="loginUsername">ชื่อผู้ใช้:</label>
+        <input type="text" id="loginUsername" name="loginUsername" required />
+        
+        <label for="loginEmail">อีเมล:</label>
+        <input type="email" id="loginEmail" name="loginEmail" required />
+        
+        <label for="loginPassword">รหัสผ่าน:</label>
+        <input type="password" id="loginPassword" name="loginPassword" required />
+        
+        <button type="submit">เข้าสู่ระบบ</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Game Top-up. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
